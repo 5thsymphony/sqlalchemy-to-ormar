@@ -25,7 +25,7 @@ FIELD_MAP = {
     "time": ormar.Time,
     "boolean": ormar.Boolean,
     "bit": ormar.Boolean,
-    "JSONB": JSONB,
+    "jsonb": JSONB,
 }
 TYPE_SPECIFIC_PARAMETERS: Dict[str, Dict] = {
     "string": {"max_length": {"key": "length", "default": 255}},
