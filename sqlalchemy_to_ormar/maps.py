@@ -1,6 +1,7 @@
 from typing import Dict, Set, Type
 
 import ormar
+from ormar_postgres_extensions import JSONB
 from ormar import Model
 
 FIELD_MAP = {
@@ -24,6 +25,7 @@ FIELD_MAP = {
     "time": ormar.Time,
     "boolean": ormar.Boolean,
     "bit": ormar.Boolean,
+    "JSONB": JSONB,
 }
 TYPE_SPECIFIC_PARAMETERS: Dict[str, Dict] = {
     "string": {"max_length": {"key": "length", "default": 255}},
