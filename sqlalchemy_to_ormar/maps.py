@@ -25,6 +25,8 @@ FIELD_MAP = {
     "time": ormar.Time,
     "boolean": ormar.Boolean,
     "bit": ormar.Boolean,
+    "json": ormar.JSON,
+    "large_binary": ormar.LargeBinary,
     "jsonb": JSONB,
 }
 TYPE_SPECIFIC_PARAMETERS: Dict[str, Dict] = {
@@ -35,6 +37,7 @@ TYPE_SPECIFIC_PARAMETERS: Dict[str, Dict] = {
         "max_digits": {"key": "precision", "default": 18},
         "decimal_places": {"key": "scale", "default": 6},
     },
+    "large_binary": {"max_length": {"key": "length", "default": 1024}},
 }
 COMMON_PARAMETERS: Dict[str, Dict] = dict(
     name={"key": "name", "default": None},
